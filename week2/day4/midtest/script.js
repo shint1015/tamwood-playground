@@ -29,8 +29,8 @@ console.log(multiplyArr([1, 2, 3, 4]))
 // sort numbers either asc or desc
 const sortArr = (arr, sortType = "asc") => {
         for (let i = 0; i < arr.length; i++){
-        for (let j=i; j< arr.length; j++) {
-            if ((sortType == "asc" && arr[i] > arr[j]) || (sortType == "desc" && arr[i] > arr[j])) {
+        for (let j=arr.length - 1; j > i; j--) {
+            if ((sortType == "asc" && arr[i] > arr[j]) || (sortType == "desc" && arr[i] < arr[j])) {
                 let val_i = arr[i]
                 let val_j = arr[j]
                 arr[i] = val_j
